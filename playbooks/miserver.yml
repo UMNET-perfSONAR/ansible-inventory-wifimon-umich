@@ -1,0 +1,6 @@
+---
+# miserver setup
+
+- hosts: miserver
+  roles:
+    - ansible-role-miserver-management

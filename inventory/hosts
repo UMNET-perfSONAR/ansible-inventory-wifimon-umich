@@ -20,6 +20,9 @@ ansible_become_method=sudo
 [wifimon_server]
 wifimon.miserver.it.umich.edu
 
+[miserver]
+wifimon.miserver.it.umich.edu
+
 #[group1:vars]
 #ansible_become=True
 #ansible_become_method=su

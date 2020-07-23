@@ -1,6 +1,6 @@
-# ansible-inventory-template
+# ansible-inventory-wifimon-umich
 
-ansible-inventory-template
+ansible-inventory-wifimon-umich
 
  - Get the corresponding Ansible playbook and bootstrap it
 
@@ -22,8 +22,7 @@ git clone https://github.com/UMNET-perfSONAR/ansible-inventory-wifimon-umich.git
 ansible \
   --ask-pass \
   --ask-become-pass  \
-  --ask-vault-pass \
-  -i ansible-inventory-template/inventory \
+  -i ansible-inventory-wifimon-umich/inventory \
   all -m ping
 ```
 
@@ -33,8 +32,7 @@ ansible \
 ansible-playbook \
   --ask-pass \
   --ask-become-pass  \
-  --ask-vault-pass \
-  -i ansible-inventory-template/inventory \
+  -i ansible-inventory-wifimon-umich/inventory \
   playbook.yml
 ```
 
@@ -42,7 +40,7 @@ ansible-playbook \
 
 ```
 ansible-galaxy install \
-  -r  ansible-inventory-template/requirements.yml \
+  -r  ansible-inventory-wifimon-umich/requirements.yml \
   --ignore-errors
 ```
 
@@ -52,7 +50,6 @@ ansible-galaxy install \
 ansible-playbook \
   --ask-pass \
   --ask-become-pass  \
-  --ask-vault-pass \
-  -i ansible-inventory-template/inventory \
-  ansible-inventory-template/playbooks/local_playbook.yml
+  -i ansible-inventory-wifimon-umich/inventory \
+  ansible-inventory-wifimon-umich/playbooks/miserver.yml
 ```

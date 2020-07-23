@@ -1,0 +1,7 @@
+---
+# ansible-role-miserver-management variables
+
+mcommunity_group_accounts:
+  - wifimon-interns
+mcommunity_purpose: wifimon analysis station
+miserver_userdel:
