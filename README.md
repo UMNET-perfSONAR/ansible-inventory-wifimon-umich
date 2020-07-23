@@ -32,8 +32,9 @@ ansible \
 ansible-playbook \
   --ask-pass \
   --ask-become-pass  \
+  --ask-vault-pass  \
   -i ansible-inventory-wifimon-umich/inventory \
-  playbook.yml
+  wifimon.yml
 ```
 
  - Bootstrap local playbook

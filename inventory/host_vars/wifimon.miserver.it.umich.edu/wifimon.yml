@@ -1,0 +1,29 @@
+---
+# wifimon vagrant setup
+
+host_name: "wifimon.miserver.it.umich.edu"
+node_name: "wifimon"
+sha_key: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          64373130326461623939646332386138323333303936383561346664613939373435656164626231
+          6537326566343265626633323234343433373339633030380a656533656166386662373435613566
+          62343664356337626561633037666231303434633137363837343734376638646633393038663733
+          6138303862646639380a363832366465313765353039653330393137396566653931303033656532
+          3630
+wifimon_user: "wifimon_user"
+wifimon_pass: "wifimonpass"
+es_config:
+  node.name: "{{ node_name }}"
+  cluster.name: "elasticsearch"
+  network.host: "{{ host_name }}"
+  discovery.seed_hosts: "{{ host_name }}"
+  cluster.initial_master_nodes: "{{ node_name }}"
+  xpack.ml.enabled: false
+  xpack.security.enabled: false
+  node.master: true
+  node.voting_only: false
+  node.data: true
+  node.ingest: true
+  node.ml: false
+  cluster.remote.connect: false
+
